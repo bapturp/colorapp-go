@@ -18,7 +18,7 @@ func (c Color) Handler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	color := Color(os.Getenv("COLOR"))
 	if color == "" {
-		color = "no color!"
+		color = "No color!"
 	}
 
 	http.HandleFunc("/healthz", func(w http.ResponseWriter, r *http.Request) {
