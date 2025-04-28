@@ -1,0 +1,13 @@
+apiVersion: v2
+description: Helm chart for colorapp services
+name: colorapp
+version: 1.0.0
+maintainers:
+  - name: infrastructure-developer-experience
+    url: https://github.com/orgs/PayFit/teams/infrastructure-developer-experience
+dependencies:
+  - name: service
+    alias: colorapp
+    condition: colorapp.enabled
+    repository: https://charts.shared.payfit.tech/common/main
+    version: 4.x.x
